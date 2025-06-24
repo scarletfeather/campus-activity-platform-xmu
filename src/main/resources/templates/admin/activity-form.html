@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>管理员活动表单</title>
+    <link rel="stylesheet" th:href="@{/static/css/style.css}">
+</head>
+<body>
+    <header th:replace="layout/header :: header"></header>
+    <h1>管理员活动表单</h1>
+    <form action="#" method="post">
+        <label for="title">活动标题:</label>
+        <input type="text" id="title" name="title" required><br>
+        <label for="description">活动描述:</label><br>
+        <textarea id="description" name="description" rows="4" cols="50"></textarea><br>
+        <input type="submit" value="提交">
+    </form>
+    <footer th:replace="layout/footer :: footer"></footer>
+</body>
+</html>

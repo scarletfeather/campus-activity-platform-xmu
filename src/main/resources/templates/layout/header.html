@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title th:text="${title} ?: '校园活动平台'"></title>
+    <link rel="stylesheet" th:href="@{/static/css/style.css}">
+</head>
+<body>
+    <header id="header">
+        <h1>校园活动平台</h1>
+        <nav>
+            <ul>
+                <li><a href="/user/activities">用户活动</a></li>
+                <li><a href="/admin/activities">管理员活动</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div id="content" th:replace="~{::content}"></div>
+</body>
+</html>

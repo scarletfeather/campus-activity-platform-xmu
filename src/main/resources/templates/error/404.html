@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>404 - 页面未找到</title>
+    <link rel="stylesheet" th:href="@{/static/css/style.css}">
+</head>
+<body>
+    <header th:replace="layout/header :: header"></header>
+    <h1>404 - 页面未找到</h1>
+    <p>您访问的页面不存在，请检查网址或返回主页。</p>
+    <a href="/">返回主页</a>
+    <footer th:replace="layout/footer :: footer"></footer>
+</body>
+</html>
