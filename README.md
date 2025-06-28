@@ -14,7 +14,10 @@
   - thymeleaf #前端
   - H2 #数据库
   - 后续添加：如char.js建立柱形统计图；引入ElementUI库美化界面
-## 构建方法
+## 开发阶段调试方法
+- 使用mvn spring-boot:run
+- 在浏览器输入localhost:端口号（8080）查看运行结果
+## 测试阶段构建方法
 - gitclone后，用IDEA打开仓库根目录
 - 在终端输入mvn clean install（如果失败就在后面再加个 -U）
 - 然后，在终端输入java -jar .\target\campus-activity-platform-1.0-SNAPSHOT.jar
