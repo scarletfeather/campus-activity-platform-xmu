@@ -13,6 +13,8 @@ public class SecurityConfig {
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         http
             .authorizeRequests()
+                .antMatchers("/", "/login", "/static/**", "/css/**", "/js/**", "/images/**").permitAll()
+                .antMatchers("/user/activities", "/user/activities/**").permitAll()
                 .antMatchers("/admin/**").hasRole("ADMIN")
                 .antMatchers("/user/**").hasRole("USER")
                 .anyRequest().authenticated()
@@ -22,7 +24,9 @@ public class SecurityConfig {
                 .permitAll()
                 .and()
             .logout()
-                .permitAll();
+                .permitAll()
+                .and()
+            .csrf().disable(); // 暂时禁用CSRF以便测试
 
         return http.build();
     }

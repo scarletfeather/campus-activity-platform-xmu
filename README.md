@@ -17,6 +17,7 @@
 ## 开发阶段调试方法
 - 使用mvn spring-boot:run
 - 在浏览器输入localhost:端口号（8080）查看运行结果
+`本项目使用该调试方法暂时有bug`
 ## 测试阶段构建方法
 - gitclone后，用IDEA打开仓库根目录
 - 在终端输入mvn clean install（如果失败就在后面再加个 -U）
